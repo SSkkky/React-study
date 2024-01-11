@@ -63,6 +63,15 @@ li {
     }
 }
 
+.motion-div {
+    width: 25%;
+
+    li {
+        width: 100%;
+        cursor: pointer;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .home {
         a {
