@@ -17,7 +17,7 @@ function Product(props) {
 
     return (
         <div className='main-cont'>
-            <div className='backto' onClick={() => {navigate('../')}}>←</div>
+            <div className='backto' onClick={() => { navigate('/') }}>←</div>
             <h2 className='title'>{location.state} Menu</h2>
             <ul className='list-cont'>
                 {

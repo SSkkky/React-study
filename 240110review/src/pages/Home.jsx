@@ -7,12 +7,13 @@ function Home(props) {
     const data = json;
     const navigate = useNavigate();
     // const arrData = ['coffee', 'latte', 'juice', 'tea'];
+    console.log(data.length)
 
     return (
         <div className='main-cont'>
             <h2 className='title main-title'>Cafe Menu</h2>
             <ul className='list-cont'>
-                <li onClick={() => { navigate('/Product', { state:'coffee'})}}>
+                <li onClick={() => { navigate('/Product', { state: 'coffee' }) }}>
                     <p><img src={data.coffee[0].img} alt='coffee' /></p>
                     <p className='list-title'>coffee</p>
                 </li>
