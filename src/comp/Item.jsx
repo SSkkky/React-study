@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
-
-function Item({ obj, remove }) {
-    const [isDone, setIsDone] = useState(false);
-    function test() {
-        setIsDone(!isDone)
-    }
-
+//obj.state && 'done'
+function Item({ obj, remove, isDone }) {
     return (
-        <li key={obj.id} className={isDone && 'done'}>
+        // 조건문 ? 참일경우 : 거짓일경우
+        <li key={obj.id} className={obj.state == true ? 'done' : ''}>
             {obj.todo}
             <div className='btn'>
                 <button>수정</button>
                 <button onClick={() => { remove(obj.id) }}>삭제</button>
-                <button onClick={test}>완료</button>
+                <button onClick={() => { isDone(obj.id) }}>완료</button>
             </div>
         </li>
     );
