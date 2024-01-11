@@ -6,7 +6,6 @@ function Write({ insert }) {
         e.preventDefault();
         let d = { id: Date.now(), todo: e.target.txt.value, state: false }
         insert(d)
-
         e.target.txt.value = '';
     }
 

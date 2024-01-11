@@ -1,15 +1,10 @@
 import React from 'react';
+import Item from './Item';
 
-function List({ data }) {
+function List({ data, remove }) {
+
     const list = data.map((obj) => (
-        <li key={obj.id}>
-            {obj.todo}
-            <div className='btn'>
-                <button>수정</button>
-                <button>삭제</button>
-                <button>완료</button>
-            </div>
-        </li>
+        <Item key={obj.id} obj={obj} remove={remove} />
     ))
     return (
         <ul className='list'>

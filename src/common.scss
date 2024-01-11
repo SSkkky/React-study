@@ -39,12 +39,10 @@ body {
         list-style-type: none;
 
         li {
-            padding: 15px 0;
+            padding: 15px;
             border-bottom: 1px solid #ddd;
             display: flex;
             justify-content: space-between;
-
-            .done {}
 
             .btn {
                 display: flex;
@@ -62,6 +60,10 @@ body {
                 color: #fff;
                 background-color: #8fb3e2;
             }
+        }
+
+        .done {
+            background-color: #8fb3e2;
         }
     }
 
