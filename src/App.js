@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import './common.scss';
+import List from './comp/List';
+import Write from './comp/Write';
 
 function App() {
+
+  // 배열
+  const initial = []; //초기값
+
+  // 다음 함수로 재랜더링
+  const [data, setData] = useState(initial);
+
+  let insert = (d) => {
+    setData([...data, d]);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='todolist'>
+      <h2> Todolist </h2>
+      <p> 할일 <span>{data.length}</span>개 남음 </p>
+
+      <List data={data} />
+      <Write insert={insert} />
+
     </div>
   );
 }
