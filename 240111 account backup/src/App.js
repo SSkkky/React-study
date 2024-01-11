@@ -31,7 +31,7 @@ function App() {
       </div>
 
       <div className="popup">
-        <button className="close-btn">x</button>
+        <button className="close-btn">✕</button>
 
         <div className='pop-cont'>
           <h2>등록하기</h2>
