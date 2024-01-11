@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 function Item({ obj, remove, isDone }) {
     return (
         // 조건문 ? 참일경우 : 거짓일경우
-        <li key={obj.id} className={obj.state == true ? 'done' : ''}>
+        <li key={obj.id} className={obj.state ? 'done' : ''}>
             {obj.todo}
             <div className='btn'>
                 <button>수정</button>

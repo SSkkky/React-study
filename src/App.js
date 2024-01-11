@@ -37,10 +37,17 @@ function App() {
     setData(d);
   }
 
+  //data.obj.state가 false(=아직안함)인 것들만 반환해서 length를 출력하기
+  let dataEa = data.filter((obj) => {
+    return obj.state === false
+    // A === B 가 true 이면 true를 반환함
+    // true가 반환되는 obj들(state=false)을 filter가 반환함!
+  })
+
   return (
     <div className='todolist'>
       <h2> Todolist </h2>
-      <p> 할일 <span>{data.length}</span>개 남음 </p>
+      <p> 할일 <span>{dataEa.length}</span>개 남음 </p>
 
       <List data={data} remove={remove} isDone={isDone} />
       <Write insert={insert} />
