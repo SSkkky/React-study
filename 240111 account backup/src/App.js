@@ -1,48 +1,36 @@
+import { useState } from 'react';
 import './common.scss';
+import List from './comp/List';
+import Write from './comp/Write';
 
 function App() {
+  let [data, setData] = useState([]);
+  let [totalMoney, setTotalMoney] = useState(0);
+  let [active, setActive] = useState(false);
+
+  let result = (d) => {
+    setData([...data, d])
+    setTotalMoney(totalMoney + d.money)
+  }
+
+  let isActive = (a) => {
+    setActive(a)
+  }
+
   return (
     <article>
       <div className="bankbook">
-        <button className="update-btn">+</button>
+        <button className="update-btn" onClick={() => { isActive(true) }}>+</button>
+
         <div className="bank-total">
           <span>2024년 입출금 내역</span>
-          <p className="total">35,000,000</p>
+          <p className="total">{totalMoney.toLocaleString()}</p>
         </div>
 
-        <div className="bank-list">
-          <ul>
-            <li>
-              <div className="left">
-                <span className="date">1.17</span>
-                <p className="input-text">강남역 커피빈</p>
-              </div>
-              <p className="input-money">-5,200</p>
-            </li>
-            <li>
-              <div className="left">
-                <span className="date">1.17</span>
-                <p className="input-text">강남역 커피빈</p>
-              </div>
-              <p className="input-money">-5,200</p>
-            </li>
-          </ul>
-        </div>
+        <List key={data.id} data={data} />
       </div>
 
-      <div className="popup">
-        <button className="close-btn">✕</button>
-
-        <div className='pop-cont'>
-          <h2>등록하기</h2>
-          <input type="number" id="pop-number" name="number"></input>
-          <input type="text" id="pop-message" placeholder='메시지를 입력해주세요' name=""></input>
-          <div className="btn">
-            <button type="submit">예금하기</button>
-            <button type="submit">출금하기</button>
-          </div>
-        </div>
-      </div>
+      <Write result={result} active={active} isActive={isActive} />
     </article>
 
   );
