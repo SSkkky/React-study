@@ -1,20 +1,17 @@
 import React from 'react';
 
-function List({ data }) {
-    console.log(data) //들어옴
+function List() {
     return (
         <div className="bank-list">
             <ul>
                 {
-                    data.map((obj) => {
-                        return <li>
+                    <li>
                             <div className="left">
-                                <span className="date">{obj.date}</span>
-                                <p className="input-text">{obj.txt}</p>
+                                <span className="date"></span>
+                                <p className="input-text"></p>
                             </div>
-                            <p className="input-money" style={{ color: obj.money < 0 ? "rgb(104, 114, 255);" : "rgb(255, 85, 127)" }}>{obj.money.toLocaleString()}</p>
+                            <p className="input-money"></p>
                         </li>
-                    })
                 }
             </ul>
         </div >
