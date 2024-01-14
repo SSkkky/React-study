@@ -1,0 +1,61 @@
+.home {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    a {
+        text-decoration-line: none;
+        color: #000;
+        font-size: 1.5rem;
+        text-align: center;
+
+        .homeimg {
+            width: 100px;
+            height: 100px;
+            background-color: #eee;
+            background-image: url('https://item.kakaocdn.net/do/50916737d0c2d22edba03ac3edf38cf8f604e7b0e6900f9ac53a43965300eb9a');
+            background-size: cover;
+        }
+    }
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+
+    a {
+        font-size: 48px;
+        text-decoration-line: none;
+        color: #000;
+    }
+}
+
+h2 {
+    text-align: center;
+    font-size: 48px;
+    text-transform: uppercase;
+}
+
+ul {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li {
+    width: 25%;
+    list-style: none;
+    box-sizing: border-box;
+    padding: 10px;
+
+    p {
+        text-align: center;
+        font-weight: 700;
+    }
+
+    img {
+        width: 100%;
+    }
+}
