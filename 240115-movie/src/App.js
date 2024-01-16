@@ -1,20 +1,20 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import React, { useEffect } from 'react';
-import { useStore } from './Store'
-import Slide from './comp/Slide';
+import Home from './comp/Home'
+import Header from './comp/Header';
+import Detail from './comp/Detail';
 
 
 function App() {
 
-  const { popular, getMovie, thumb, poster } = useStore();
-
-  useEffect(() => {
-    getMovie('popular')
-  }, [])
-
-  if (!popular.length) return <>준비중....</>;
-
   return (
-    <Slide />
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/:cate/:id" element={<Detail />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
