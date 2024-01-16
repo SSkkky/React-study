@@ -19,7 +19,13 @@ function Trend({ cate, type }) {
 
     let list = null;
     if (cate == 'movie' && type == 'popular') {
-        list = 'popular movie'
+        list = 'Trending Movies'
+    } else if(cate == 'movie' && type == 'top_rated'){
+        list = 'Top Rated Movies'
+    } else if(cate == 'tv' && type == 'popular'){
+        list = 'Trending TV'
+    } else {
+        list = 'Top Rated TV'
     }
 
     return (
