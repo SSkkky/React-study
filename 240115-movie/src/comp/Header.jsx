@@ -6,7 +6,7 @@ function Header(props) {
         <header>
             <Link to="/"><h1>SFLIX</h1></Link>
             <nav>
-                <Link to="/">Home</Link>
+                <Link to="/" className='active'>Home</Link>
                 <Link to="/">Movies</Link>
                 <Link to="/">TV Series</Link>
             </nav>
