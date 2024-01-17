@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "aa": "^0.1.40",
     "create-react-app": "^5.0.1",
     "movie": "^1.0.1"
   }
