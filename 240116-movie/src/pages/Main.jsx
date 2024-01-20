@@ -20,14 +20,14 @@ function Main(props) {
         <>
         <Swiper
         slidesPerView={1}
-        loop={true}
+        // loop={true}
         spaceBetween={0}
         centeredSlides={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        modules={[Autoplay]}
+        // autoplay={{
+        //   delay: 5000,
+        //   disableOnInteraction: false,
+        // }}
+        // modules={[Autoplay]}
         className="mySwiper"
       >
         {
@@ -38,7 +38,8 @@ function Main(props) {
                         <strong className='main-title'>{item.original_title}</strong>
                         <p className='main-overview'>{item.overview}</p>
                         <div className='main-btns'>
-                            <button className='play'>▶ Play</button>
+                            <button className='play'>
+                            </button>
                             <button className='info'>◎ Info</button>
                         </div>
                     </div>

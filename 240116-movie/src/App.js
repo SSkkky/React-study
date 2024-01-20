@@ -1,20 +1,13 @@
-import Main from "./pages/Main";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home'
 
 function App() {
   return (
-    <>
-    <Main />
-    {/* {
-      list.map((item)=>{
-        return <p key={item.id}>
-          <p>{item.original_title}</p>
-          <img src={thumb + '200/' + item.poster_path} alt="" />
-          <br></br>
-          <br></br>
-          </p>
-      })
-    } */}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
