@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './common.scss';
 import Write from './comp/Write';
+import Item from './comp/Item'
 
 function App() {
 
@@ -10,10 +11,10 @@ function App() {
   // let [money, setMoney] = useState(0);
 
   const calculate = (d) => {
-    console.log(' calculate : ', data)
     let amount = Number(total) + d.money;
     setTotal(amount);
-    setData(data);
+    setData([...data, d]);
+    setPopState(!popState);
   }
   // const combine = (flag) => {
   //   let data = {
@@ -39,7 +40,7 @@ function App() {
 
         <div className="bank-list">
           <ul>
-            {/* <Item key={data.id} data={data} /> */}
+            <Item key={data.id} data={data} />
             {/* {
               data.map((obj) => {
                 <Item key={obj.id} obj={obj} />

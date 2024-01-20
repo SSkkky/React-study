@@ -8,7 +8,7 @@ function Item({ data }) {
             return <li>
                 <div className="left">
                     <span className="date">{d.date}</span>
-                    <p className="input-text">{d.txt}</p>
+                    <p className="input-text">{d.message}</p>
                 </div>
                 <p className="input-money">{d.money}</p>
             </li>
