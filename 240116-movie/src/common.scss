@@ -1,5 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    box-sizing: border-box;
+    outline: none;
+    border: 0;
+}
+
+body {
+    font-size: 18px;
+}
+
 .main-container {
     width: 100%;
     height: 100%;
-    backdrop-filter: brightness(50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 9rem 3rem;
+    color: #fff;
+
+    .main-title {
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    .main-overview {
+        margin: 1rem 0;
+    }
+
+    button {
+        background-color: transparent;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+    }
+
+    .main-btns {
+        .play {
+            margin-right: 1rem;
+            background-color: #fff;
+            color: #000;
+        }
+
+        .info {
+            background-color: #444;
+        }
+    }
 }

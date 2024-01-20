@@ -14,7 +14,7 @@ import '../common.scss'
 function Main(props) {
     const {getList, list, poster, thumb} = useStore();
     useEffect(()=>{ getList() },[])
-    let i = 0;
+    console.log(list)
     
     return (
         <>
@@ -35,7 +35,12 @@ function Main(props) {
                 return <SwiperSlide key={item.id}
                 style={{backgroundImage:`url(${poster + item.backdrop_path})`}}>
                     <div className="main-container">
-                        <div></div>
+                        <strong className='main-title'>{item.original_title}</strong>
+                        <p className='main-overview'>{item.overview}</p>
+                        <div className='main-btns'>
+                            <button className='play'>▶ Play</button>
+                            <button className='info'>◎ Info</button>
+                        </div>
                     </div>
                 </SwiperSlide>
             })
