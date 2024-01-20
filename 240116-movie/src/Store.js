@@ -6,12 +6,13 @@ export const useStore = create((set)=>{
 
     return{
         list:[],
+        poster : 'https://image.tmdb.org/t/p/original/',
+        thumb : 'https://image.tmdb.org/t/p/w',
         getList : ()=>{
             axios(url)
             .then(res => {
                 set((state)=>{
-                    console.log('res :', res.data)
-                    return{list : res.data}
+                    return{list : res.data.results}
                 })
             })
         }

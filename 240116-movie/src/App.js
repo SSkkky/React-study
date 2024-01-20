@@ -1,15 +1,20 @@
-import { useEffect } from "react";
-import { useStore } from "./hooks/Store";
+import Main from "./pages/Main";
 
 function App() {
-  const {getList, list} = useStore();
-
-  useEffect(()=>{
-    getList()
-  },[])
-
   return (
-    <></>
+    <>
+    <Main />
+    {/* {
+      list.map((item)=>{
+        return <p key={item.id}>
+          <p>{item.original_title}</p>
+          <img src={thumb + '200/' + item.poster_path} alt="" />
+          <br></br>
+          <br></br>
+          </p>
+      })
+    } */}
+    </>
   );
 }
 
