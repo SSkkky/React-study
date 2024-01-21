@@ -1,15 +1,15 @@
 import React from 'react';
 import { useEffect } from "react";
-import { useStore } from "../Store";
+import { useStore } from "../../Store";
 
 // swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import '../swiper.scss';
+import '../../swiper.scss';
 import { Autoplay } from 'swiper/modules';
 
-import '../common.scss'
+import '../../common.scss'
 
 function Main(props) {
     const {getList, list, poster} = useStore();
@@ -17,7 +17,6 @@ function Main(props) {
     console.log(list)
     
     return (
-        <>
         <Swiper
         slidesPerView={1}
         loop={true}
@@ -49,7 +48,6 @@ function Main(props) {
             })
         }
       </Swiper>
-      </>
     );
 }
 
