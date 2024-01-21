@@ -9,18 +9,19 @@ export function MyContext({ children }) {
     function reducer(state, action) {
         switch (action.type) {
             case 'insert':
-                return state = { ...state, name: action.name }
-                break;
-            /*case 'delete':
-                return state = { ...state, name: action.name }
-                break;*/
+                return state = [
+                        {
+                            name: action.name,
+                            tel: action.tel,
+                            age: action.age
+                        }   
+                ]
         }
     }
 
     const [state, dispatch] = useReducer(
         reducer,
         [
-            { name: '홍길동', tel: '010-0000-0000', age: 30 },
             { name: '홍길동', tel: '010-0000-0000', age: 30 }
         ]
     )
