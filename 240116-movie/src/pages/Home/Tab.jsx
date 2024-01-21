@@ -7,37 +7,31 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import '../../tab.module.scss';
-
-// import required modules
-import { Pagination } from 'swiper/modules';
+import styles from '../../tab.module.scss';
 
 function Tab(props) {
-    const {getList, list, poster} = useStore();
+    const {getList, list, thumb} = useStore();
     useEffect(()=>{ getList() },[])
 
     return (
-        <>
+        <div className={styles.mainTab}>
+        <h3>인기상영작</h3>
         <Swiper
-          slidesPerView={3}
-          spaceBetween={30}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination]}
-          className="mySwiper"
+          slidesPerView={6.5}
+          spaceBetween={10}
+          className={`mySwiper ${styles.swiper}`}
         >
-          <SwiperSlide>Slide 1</SwiperSlide>
-          <SwiperSlide>Slide 2</SwiperSlide>
-          <SwiperSlide>Slide 3</SwiperSlide>
-          <SwiperSlide>Slide 4</SwiperSlide>
-          <SwiperSlide>Slide 5</SwiperSlide>
-          <SwiperSlide>Slide 6</SwiperSlide>
-          <SwiperSlide>Slide 7</SwiperSlide>
-          <SwiperSlide>Slide 8</SwiperSlide>
-          <SwiperSlide>Slide 9</SwiperSlide>
+          {
+            list.map((item) => {
+                return <SwiperSlide
+                key={item.id}
+                className={styles.swiperSlide}>
+                    <img src={thumb + '200/' + item.poster_path} alt="" />
+                </SwiperSlide>
+            })
+        }
         </Swiper>
-      </>
+      </div>
     );
 }
 

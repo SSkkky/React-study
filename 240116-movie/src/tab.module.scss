@@ -1,0 +1,28 @@
+.mainTab {
+    position: absolute;
+    bottom: -10rem;
+    left: 0;
+    z-index: 1;
+    padding: 3rem;
+    width: 100%;
+
+    h3 {
+        font-size: 2rem;
+        color: #fff;
+        margin-bottom: 1rem;
+    }
+
+    .swiper {
+        width: 100%;
+    }
+
+    .swiperSlide {
+        text-align: center;
+        font-size: 18px;
+        background-size: cover;
+
+        img {
+            width: 100%;
+        }
+    }
+}
