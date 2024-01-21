@@ -6,10 +6,10 @@ import { useStore } from "../../Store";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import '../../swiper.scss';
 import { Autoplay } from 'swiper/modules';
 
 import '../../common.scss'
+import styles from '../../swiper.module.scss';
 
 function Main(props) {
     const {getList, list, poster} = useStore();
@@ -27,20 +27,19 @@ function Main(props) {
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
-        className="mySwiper"
-      >
+        className={`mySwiper ${styles.swiper}`}>
         {
             list.map((item, i) => {
                 if(i < 5){
-                return <SwiperSlide key={item.id}
+                return <SwiperSlide key={item.id} className={styles.swiperSlide}
                 style={{backgroundImage:`url(${poster + item.backdrop_path})`}}>
-                    <div className="main-container">
-                        <strong className='main-title'>{item.original_title}</strong>
-                        <p className='main-overview'>{item.overview}</p>
-                        <div className='main-btns'>
-                            <button className='play'>
+                    <div className={styles.mainContainer}>
+                        <strong className={styles.mainTitle}>{item.original_title}</strong>
+                        <p className={styles.mainOverview}>{item.overview}</p>
+                        <div className={styles.mainBtns}>
+                            <button className={styles.play}>
                             </button>
-                            <button className='info'>◎ Info</button>
+                            <button className={styles.info}>◎ Info</button>
                         </div>
                     </div>
                 </SwiperSlide>
