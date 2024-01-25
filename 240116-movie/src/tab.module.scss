@@ -1,10 +1,14 @@
 .mainTab {
     position: absolute;
-    bottom: -10rem;
+    top: 60vh;
     left: 0;
     z-index: 1;
     padding: 3rem;
     width: 100%;
+
+    div {
+        margin-bottom: 1rem;
+    }
 
     h3 {
         font-size: 1.5rem;
