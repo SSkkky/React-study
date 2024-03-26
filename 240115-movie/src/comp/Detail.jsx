@@ -39,7 +39,7 @@ function Detail() {
                 <figure>
                     <p><img src={thumb + '300/' + detail.poster_path} alt='' className='de-img' /></p>
                     <figcaption>
-                        {/* <h2 className='de-title'>{detail.original_title}</h2> */}
+                        <h2 className='de-title'>{detail.original_title}</h2>
                         <div className='de-tag'>
                             {
                                 detail.genres.map((obj) => {

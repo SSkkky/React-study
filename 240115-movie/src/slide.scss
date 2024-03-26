@@ -68,7 +68,7 @@ header {
             height: 5px;
             background-color: red;
             position: absolute;
-            top: 40px;
+            bottom: -0.5rem;
             left: 0;
             transform: scaleX(0);
             transition: 0.3s ease-in-out;
@@ -262,35 +262,58 @@ header {
     }
 }
 
-// @media (max-width: 1024px) {
+@media (max-width: 1024px) {
 
-//     html,
-//     body {
-//         font-size: 14px;
-//     }
+    html,
+    body {
+        font-size: 14px;
+    }
 
-//     .main-swiper {
-//         height: 60vh;
+    .mySwiper {
+        margin-top: 75px;
+    }
 
-//         .main-figure {
-//             img {
-//                 display: none;
-//             }
-//         }
+    .main-swiper {
+        height: 60vh;
+
+        .main-figure {
+            img {
+                display: none;
+            }
+        }
 
 
-//         figcaption {
-//             button {
-//                 font-size: 1.5rem;
-//             }
-//         }
-//     }
-// }
+        figcaption {
+            button {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
 
-// @media (max-width: 768px) {
+@media (max-width: 800px) {
+    .main-figure {
+        justify-content: flex-end;
 
-//     html,
-//     body {
-//         font-size: 12px;
-//     }
-// }
+        figcaption {
+            width: 100%;
+        }
+
+        img {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    .menu-section .header-cont {
+        h3 {
+            font-size: 1.2rem;
+        }
+
+        button {
+            font-size: 0.9rem;
+            border-width: 1px;
+        }
+    }
+}

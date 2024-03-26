@@ -26,8 +26,7 @@ export const useStore = create((set) => {
             axios(url)
                 .then(res => {
                     set((state) => {
-
-                        console.log('res.data : ', res.data)
+                        // console.log('res.data : ', res.data)
                         return { detail: res.data }
                     });
                 });
